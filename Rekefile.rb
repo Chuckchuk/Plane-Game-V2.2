@@ -7,7 +7,7 @@ Releasy::Project.new do
   version "2.2"
 
   executable "bin/Main.rb"
-  files "lib/**/*.*"
+  files "lib/**/*.rb", "resources/**/*.png"
 
 #  add_build :osx_app do
 #    wrapper "wrappers/gosu-mac-wrapper-0.7.41.tar.gz"
