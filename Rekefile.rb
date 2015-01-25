@@ -6,12 +6,14 @@ Releasy::Project.new do
   name "Plane Game"
   version "2.2"
 
-  executable "bin/Main.rb"
+  executable "lib/Main.rb"
   files "lib/**/*.rb", "resources/**/*.png"
+  add_link "https://github.com/Chuckchuk/Plane-Game-V2.2"
 
-#  add_build :osx_app do
-#    wrapper "wrappers/gosu-mac-wrapper-0.7.41.tar.gz"
-#  end
+  add_build :osx_app do
+    url "com.github.Plane-Game-V2.2"
+    wrapper "wrappers/gosu-mac-wrapper-0.7.41.tar.gz"
+  end
 
   add_build :source do
     add_package :zip
