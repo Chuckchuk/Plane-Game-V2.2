@@ -1,19 +1,20 @@
 require 'rubygems'
-require 'bundler'
+require 'bundler/setup'
 require 'releasy'
 
 Releasy::Project.new do
   name "Plane Game"
   version "2.2"
 
-  executable "lib/Main.rb"
-  files "lib/**/*.rb", "resources/**/*.png"
-  add_link "https://github.com/Chuckchuk/Plane-Game-V2.2"
+  executable "bin/Main.rb"
+  files "lib/**/*.rb"#, "resources/**/*.png"
+  add_link "https://github.com/Chuckchuk/Plane-Game-V2.2", "My Game"
 
-  add_build :osx_app do
-    url "com.github.Plane-Game-V2.2"
-    wrapper "wrappers/gosu-mac-wrapper-0.7.41.tar.gz"
-  end
+ # add_build :osx_app do
+  #  url "com.github.Plane-Game-V2.2"
+ #   wrapper "wrappers/gosu-mac-wrapper-0.7.41.tar.gz"
+ #   add_package :zip
+ # end
 
   add_build :source do
     add_package :zip
